@@ -18,7 +18,7 @@ export const Posts = () => {
   const { counterState, counterDispatch } = counterContext;
 
 
-  console.log('PostDispatch' , postsDispath);
+
   useEffect(() => {
     loadPosts(postsDispath).then((dispatch) => {
       if (isMounted.current) {
@@ -30,7 +30,7 @@ export const Posts = () => {
       isMounted.current = false;
     };
   }, [postsDispath]);
-
+  
   return (
     <div>
       <button onClick={() => incrementCounter(counterDispatch)}>
